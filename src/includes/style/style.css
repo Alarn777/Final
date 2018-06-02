@@ -1,11 +1,13 @@
 .dev-box {
   height: 100px;
-  background-color: gray; }
+  background-color: gray;
+}
 
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 section,
 nav,
@@ -13,182 +15,73 @@ main,
 header,
 footer,
 aside {
-  display: block; }
+  display: block;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
-.eventDetailsPage .big-box {
-  background-color: #666666; }
-  .eventDetailsPage .big-box .row_big {
-    margin: 15px; }
-  .eventDetailsPage .big-box .row {
-    margin-left: 15px; }
-  .eventDetailsPage .big-box .row_space {
-    height: 200px; }
-.eventDetailsPage .col-xl-3 .row_skip {
-  height: 63px; }
-.eventDetailsPage .col-xl-3 .row ul {
-  list-style-type: none; }
-  .eventDetailsPage .col-xl-3 .row ul li {
-    margin-bottom: 15px; }
-.eventDetailsPage .col-xl-4 .row_big {
-  margin: 15px; }
-.eventDetailsPage .col-xl-4 .row .card {
-  width: 18rem; }
+.eventDetailsPage {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
-.breadcrumbs {
+.eventDetailsPage ul {
+  list-style-type: none;
+}
+
+.eventDetailsPage .event-table-row-description {
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  border: solid 1px #000000;
   height: 40px;
-  position: relative;
-  float: left; }
-  .breadcrumbs ol {
-    margin: 0; }
+  margin: 15px 0;
+  padding: 7px 0;
+}
 
-.hello {
-  color: white; }
+.eventDetailsPage .description ul {
+  min-height: 300px;
+}
 
-.v {
-  padding: 0;
-  margin: 0; }
+.eventDetailsPage .description ul li {
+  border-bottom: none;
+}
 
-.v > img {
-  height: auto;
-  /*padding: 15px;*/
-  width: 30%;
-  padding: 0;
-  margin: 0; }
+.eventDetailsPage .description ul li b {
+  margin-right: 4px;
+}
 
-.navbar-brand {
-  padding: 0; }
+.eventDetailsPage .event-actions i {
+  font-size: 1.5em;
+}
 
-.navbar-brand > img {
-  height: 200%;
-  /*padding: 15px;*/
-  width: auto;
-  margin-right: 10px;
-  padding: 0; }
+.eventDetailsPage .event-actions ul {
+  margin-top: 54px;
+}
 
-#icons > li > a > img {
-  height: 30px; }
+.eventDetailsPage .event-actions ul li {
+  height: 33px;
+}
 
-.brand-centered {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0; }
+.eventDetailsPage .attach-image {
+  padding-top: 15px;
+}
 
-.brand-centered .navbar-brand {
-  display: flex;
-  align-items: center; }
+.eventDetailsPage .attach-image .card img {
+  padding: 7px;
+}
 
-.navbar-toggle {
-  z-index: 1; }
+.eventDetailsPage .attach-image textarea {
+  border-radius: 10px;
+}
 
-#navbar9 {
-  padding: 0;
-  margin: 0; }
+input {
+  border-radius: 5px;
+  border: 1px solid #cfcfcf;
+}
 
-/*search*/
-#custom-search-input {
-  position: relative;
-  float: left;
-  margin-left: 1%;
-  width: 20%;
-  position: relative;
-  border: solid 1px #E4E4E4;
-  border-radius: 3px;
-  background-color: #fff; }
-
-#custom-search-input input {
-  border: 0;
-  box-shadow: none; }
-
-#custom-search-input button {
-  margin: 2px 0 0 0;
-  background: none;
-  box-shadow: none;
-  border: 0;
-  color: #666666;
-  padding: 0 8px 0 10px;
-  border-left: solid 1px #ccc; }
-
-#custom-search-input button:hover {
-  border: 0;
-  box-shadow: none;
-  border-left: solid 1px #ccc; }
-
-#custom-search-input .glyphicon-search {
-  font-size: 23px; }
-
-.table {
-  position: relative;
-  /*width: auto;*/
-  /*height: 50px;*/
-  background: #D3D3D3; }
-
-.table ul {
-  margin: 1%;
-  background: #D3D3D3; }
-
-.table ul li {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 6%;
-  color: gray;
-  display: inline-block;
-  padding: 0 1%;
-  z-index: 129;
-  font-family: "Arial", serif;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: left; }
-
-#eventsAdded {
-  position: relative;
-  margin: 1%; }
-
-.eventAdded {
-  margin: 1px 10px 0;
-  padding: 10px;
-  background: #f1eaea;
-  text-align: left;
-  color: black; }
-
-.eventAdded p {
-  display: inline;
-  text-align: left;
-  font-family: "Arial", serif;
-  line-height: 2px; }
-
-.eventAdded p:first-child {
-  display: inline;
-  text-align: left;
-  margin-right: 12%;
-  margin-left: 2%;
-  font-family: "Arial", serif;
-  line-height: 2px; }
-
-.eventAdded p:nth-child(2) {
-  margin-right: 8%; }
-
-.eventAdded p:nth-child(3) {
-  margin-right: 6%; }
-
-.eventAdded p:nth-child(4) {
-  margin-right: 12%; }
-
-.eventAdded p:nth-child(5) {
-  margin-right: 12%; }
-
-.eventButtons {
-  background: #f1eaea;
-  border: none;
-  cursor: pointer;
-  margin-left: 7px; }
-
-.eventButtons img {
-  max-height: 25px; }
-
+.btn-primary {
+  background-color: #90caf9;
+}
 /*# sourceMappingURL=style.css.map */
