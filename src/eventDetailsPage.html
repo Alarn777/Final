@@ -14,7 +14,7 @@
     <title>Improvements in Shenkar</title>
 </head>
 
-<body>
+<body class="eventDetailsPage">
     <div class="container-fixed">
         <ul class="nav nav-pils">
             <li class="nav-item">
@@ -36,11 +36,88 @@
                 <a href="#" class="nav-link disabled">Disabled</a>
             </li>
         </ul>
-        <div class="row">
-            <main class="col-xl-12">
-                <!-- Code -->
-                <div class="row">
 
+        <div class="row" >
+            <main class="col-xl-12 big-box " style="background-color: aliceblue">
+            </main>
+        </div>
+
+
+
+
+        <div class="row">
+            <main class="col-xl-5 big-box">
+                <div class="row_big">
+                    <h3>Event description:</h3>
+                </div>
+                <div class="row">
+                    <p>Date:</p>
+                </div>
+                <div class="row">
+                    <p>Time:</p>
+                </div>
+                <div class="row">
+                    <p>Event Nuber:</p>
+                </div>
+                <div class="row">
+                    <p>Status:</p>
+                </div>
+                <div class="row">
+                    <p>Category:</p>
+                </div>
+                <div class="row">
+                    <p>Location:</p>
+                </div>
+                <div class="row">
+                    <p>Reported by:</p>
+                </div>
+                <div class="row">
+                    <p>Description:</p>
+                </div>
+                <div class="row_space">
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="event_passed_to">Transferr event to:</label>
+                        <input type="text" class="form-control" id="event_passed_to">
+                    </div>
+                    <p></p>
+
+                </div>
+
+            </main>
+            <main class="col-xl-3" style="background:olivedrab">
+                <div class="row_skip">
+
+                </div>
+                <div class="row">
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-print"></i><a href="#" >Print Event</a></li>
+                        <li><i class="fa-li fa fa-wrench"></i><a href="#" >Open Service Request</a></li>
+                        <li><i class="fa-li fa fa-paper-plane"></i><a href="#" >Email Event</a></li>
+                        <li><i class="fa-li fa fa-download"></i><a href="#" >Download PDF</a></li>
+                        <li><i class="fa-li fa fa-trash"></i><a href="#" >Delete Event</a></li>
+                        <li><i class="fa-li fa fa-check-circle"></i><a href="#" >Close Event</a></li>
+                    </ul>
+                </div>
+            </main>
+            <main class="col-xl-4 big-box" style="background-color: orange">
+                <div class="row_big">
+                    <h3>Attached picture:</h3>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <img class="card-img-top" src="includes/images/image%20cap.svg" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="comment">Comment:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <button type="button" class="col-xl-5 btn btn-default">Cancel</button>
+                            <button type="button" class="col-xl-5 btn btn-primary">Save</button>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>

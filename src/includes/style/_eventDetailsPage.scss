@@ -1,0 +1,40 @@
+.eventDetailsPage{
+
+  .big-box{
+    background-color: #666666;
+    .row_big {
+      margin: 15px;
+    }
+    .row {
+      margin-left: 15px;
+    }
+    .row_space {
+      height: 200px;
+    }
+  }
+  .col-xl-3 {
+    .row_skip {
+      height: 63px;
+    }
+    .row {
+      //margin-left: 15px;
+      ul {
+        list-style-type: none;
+        li{
+          margin-bottom: 15px;
+        }
+      }
+
+    }
+  }
+  .col-xl-4 {
+    .row_big {
+      margin: 15px;
+    }
+    .row {
+      .card {
+        width: 18rem;
+      }
+    }
+  }
+}
