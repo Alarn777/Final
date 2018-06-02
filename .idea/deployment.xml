@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="Yonit">
+        <serverdata>
+          <mappings>
+            <mapping deploy="dev_208" local="$PROJECT_DIR$" web="/web1/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
