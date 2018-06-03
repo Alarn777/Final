@@ -1,0 +1,46 @@
+.serviceRequestOpen {
+  ul {
+    list-style-type: none;
+  }
+  margin-left: 15px;
+  margin-right: 15px;
+  .event-table-row-description {
+    background-color: #c0c0c0;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    height: 40px;
+    margin: 15px 0;
+    padding: 7px 0;
+  }
+  .col-lg-4 {
+    width: auto;
+    flex: 0 0 100%;
+    margin: 10px;
+  }
+  .form-control {
+    width: 490px;
+    flex: 0;
+  }
+  .form-group {
+    margin: 25px;
+    width: 500px;
+  }
+  .submission-buttons {
+    //margin-left:  25px;
+    margin-top: 5px;
+    width: 243px;
+    .btn-default {
+      border-width: 1px;
+      border-color: silver;
+
+    }
+  }
+
+
+
+
+
+
+
+
+}
