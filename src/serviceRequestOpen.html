@@ -19,6 +19,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
+    <script src="includes/js/script.js"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Improvements in Shenkar</title>
 </head>
@@ -86,10 +88,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="usr">Requested By:</label>
-                    <input type="text" class="form-control" id="usr">
+                    <label for="requestedBy">Requested By:</label>
+                    <input type="text" class="form-control" id="requestedBy">
                     <button type="button" class="btn btn-default submission-buttons">Cancel</button>
-                    <button type="button" class="btn btn-primary submission-buttons">Submit Request</button>
+                    <button type="button" onclick="success()" class="btn btn-primary submission-buttons">Submit Request</button>
                 </div>
             </form>
         </section>

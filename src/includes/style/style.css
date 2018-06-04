@@ -77,6 +77,10 @@ a {
     .serviceRequestOpen .submission-buttons .btn-default {
       border-width: 1px;
       border-color: silver; }
+  .serviceRequestOpen .swal-title {
+    position: center;
+    font-size: 20px;
+    margin-bottom: 28px; }
 
 input {
   border-radius: 5px;
