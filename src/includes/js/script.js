@@ -70,5 +70,15 @@ function addItem(){
         var placeToAdd = document.getElementById("eventsAdded");
         document.body.appendChild(newDiv);
 }
-//
-// $( document ).ready(addItem());
+
+
+
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}

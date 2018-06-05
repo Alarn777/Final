@@ -16,31 +16,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
+
     <title>Improvements in Shenkar</title>
 </head>
 
-<body class="eventDetailsPage">
-    <div class="container">
-        <ul class="nav nav-pils">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-size-fix">
+    <a class="navbar-brand" href="#"><img src="includes/images/v.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link active">Active</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Action</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Another link</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link disabled">Disabled</a>
+                <a class="nav-link" href="#"><img src="includes/images/improve.png"></a>
             </li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <button class="fa fa-user fa-2x" type="submit"></button>
+            <button class="fa fa-cog fa-2x" type="submit"></button>
+        </form>
+    </div>
+</nav>
+
+<body class="eventDetailsPage">
+    <div class="container">
+
         <div class="row">
             <main class="col-xl-12">
                 <form action="post">

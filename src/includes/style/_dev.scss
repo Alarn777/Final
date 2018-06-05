@@ -2,5 +2,26 @@
     height: 100px;
     background-color: gray;
 }
-
+.navbar-size-fix {
+    ul {
+        //position: relative;
+        margin-left: 44%;
+    }
+    img {
+      height: 40px;
+      width: auto;
+    }
+    button {
+        border :none;
+        background: none;
+        margin: 5px;
+    }
+}
 $dev-1:gray;
+
+
+
+
+@media screen and (max-width: 600px) {
+}
+
