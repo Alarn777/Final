@@ -21,7 +21,7 @@
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
+    <script src="includes/js/eventDetails.js"></script>
 
     <title>Improvements in Shenkar</title>
 </head>
@@ -102,11 +102,14 @@
                                 <b>Description:</b>The glass window is broken in the classroom
                             </li>
                         </ul>
-                        <h4>Transfer event to:</h4>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter username..."
-                                   id="event_passed_to">
-                        </div>
+                        <form>
+                            <h4>Transfer event to:</h4>
+                            <div id="sentForm" class="form-group">
+                                <input type="text" name="sendEventTo" class="form-control" placeholder="Enter username..."
+                                       id="event_passed_to">
+                                <button type="button" class="btn btn-primary button-send-fix" id="sendMessage" onclick="sendEvent()">Send</button>
+                            </div>
+                        </form>
                     </section>
                     <section class="col-xl-3 event-actions">
                         <ul>
