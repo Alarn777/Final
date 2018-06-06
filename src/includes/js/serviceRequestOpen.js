@@ -1,5 +1,4 @@
-
-var createFakeContent = function (){
+var createFakeContent = function() {
 
     if (document.body.id === "serviceRequestOpen")
         fillWithContent();
@@ -13,8 +12,8 @@ function success() {
         showConfirmButton: true,
         confirmButtonText: "OK",
         closeOnConfirm: false
-    }).then(function (result) {
-        window.location = "http://localhost:63342/Final/index.html";
+    }).then(function(result) {
+        window.location = "http://localhost:63342/Final/index.html?eventId=2";
     })
 
 

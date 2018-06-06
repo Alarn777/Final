@@ -1,132 +1,104 @@
+var getUrlParam = function(param) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
 
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == param)
+            return pair[1];
 
+    }
 
-window.onload = function (ev) {
+    return (false);
+}
 
+var fillFakeContent = function(ev) {
     if (document.body.id === "indexPage")
-        for (var i = 0; i < 4; i++) {
+        for (var i = 1; i < 7; i++)
             addItemIndexPage(i);
-        }
-
 };
 
 
-
-
 function addItemIndexPage(eventId) {
-    console.log("Entered");
-    //creating new row
-    var newRow = document.createElement("div");
-    newRow.className = "row one-event";
-    newRow.id = "event" + eventId;
-    //filling it with content
-    var newDiv = document.createElement("div");        // Create a <div> element
-    newDiv.className = "col-md-2";
-    var eventNum = document.createElement("p");
-    eventNum.innerHTML = "1";
-    newDiv.appendChild(eventNum);
+    var div = function() {
+        return document.createElement("div");
+    };
 
-    newRow.appendChild(newDiv);
+    var p = function(innerHtml) {
+        var result = document.createElement("p");
+        result.innerHTML = innerHtml;
+        return result;
+    };
 
-    newDiv = document.createElement("div");        // Create a <div> element
-    newDiv.className = "col-md-2";
-    var date = document.createElement("p");
-    date.innerHTML = "21.1.14";
-    newDiv.appendChild(date);
+    var newCell = function() {
+        var div = document.createElement("div");
+        div.className = "col-md-2";
+        return div;
+    };
 
-    newRow.appendChild(newDiv);
+    var createProgressIcon = function() {
+        var progressIcon = document.createElement("i");
+        progressIcon.className = "fa fa-sync";
+        return progressIcon;
+    };
 
-    newDiv = document.createElement("div");        // Create a <div> element
-    newDiv.className = "col-md-2";
-    var location = document.createElement("p");
-    location.innerHTML = "Pernik building";
-    newDiv.appendChild(location);
+    var newIconButton = function(iconClass, onClick) {
+        var button = document.createElement("button");
+        button.className = "fas " + iconClass;
+        if (onClick)
+            button.onclick = onClick;
 
-    newRow.appendChild(newDiv);
+        return button;
+    };
 
-    newDiv = document.createElement("div");        // Create a <div> element
-    newDiv.className = "col-md-2";
-    var fix_improve = document.createElement("p");
-    fix_improve.innerHTML = "Fix";
-    newDiv.appendChild(fix_improve);
+    var row = div();
+    row.className = "row one-event";
+    row.id = "event" + eventId;
 
-    newRow.appendChild(newDiv);
+    cell = newCell();
+    var eventNum = p(eventId);
+    if (getUrlParam("eventId") == eventId) {
+        row.classList.add("in-progress");
+        eventNum.appendChild(createProgressIcon());
+    }
 
-    newDiv = document.createElement("div");        // Create a <div> element
-    newDiv.className = "col-md-2";
-    var confirmed_by = document.createElement("p");
-    confirmed_by.innerHTML = "5";
-    newDiv.appendChild(confirmed_by);
+    cell.appendChild(eventNum);
+    row.appendChild(cell);
+    cell = newCell();
 
-    newRow.appendChild(newDiv);
+    var date = new Date();
+    date.setMonth(date.getMonth() - eventId);
+    var value = p(date.toLocaleDateString("en-us"));
+    cell.appendChild(value);
 
-    newDiv = document.createElement("div");
-    newDiv.className = "col-md-2";
-    var openButton = document.createElement("button");
-    openButton.className = "far fa-plus-square";
-    newDiv.appendChild(openButton);
+    row.appendChild(cell);
 
-    newRow.appendChild(newDiv);
+    cell = newCell();
+    cell.appendChild(p("Pernik building"));
+    row.appendChild(cell);
 
-    var eventButton = document.createElement("button");
-    eventButton.className = "fas fa-clipboard-list";
-    var x = window.location.hostname + "eventDetailsPage.html";
-    eventButton.onclick = function (eventId) {
+    cell = newCell();
+    cell.appendChild(p("Fix"));
+    row.appendChild(cell);
+
+    cell = newCell();
+    cell.appendChild(p(Math.ceil(Math.random() * 10), 2));
+    row.appendChild(cell);
+
+    cell = newCell();
+    cell.appendChild(newIconButton("fa-plus-square"));
+    cell.appendChild(newIconButton("fa-clipboard-list", function(eventId) {
         window.location = "eventDetailsPage.html?eventId=" + eventId;
-    };
-    newDiv.appendChild(eventButton);
+    }));
+    cell.appendChild(newIconButton("fa-check-circle"));
+    cell.appendChild(newIconButton("fa-trash-alt"));
 
-    var closeEventButton = document.createElement("button");
-    closeEventButton.className = "fas fa-check-circle";
-    newDiv.appendChild(closeEventButton);
+    row.appendChild(cell);
 
-    var deleteEventButton = document.createElement("button");
-    deleteEventButton.className = "fas fa-trash-alt";
-    newDiv.appendChild(deleteEventButton);
-    deleteEventButton.onclick = function () {
-        deleteEventOnIndex();
-    };
-
-    newRow.appendChild(newDiv);
 
     var placeToAdd = document.getElementById("addingEventsHere");
-    placeToAdd.appendChild(newRow);
+    placeToAdd.appendChild(row);
 }
 
-
-function deleteEventOnIndex() {
-
-    // $(this).delete();
-
-
-    swal({
-        title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this event!",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true
-    })
-        .then(function (willDelete) {
-            if (willDelete) {
-                var childs = document.getElementById('addingEventsHere').childNodes;
-                var len = childs.length;
-
-                if (len--) do {
-                    console.log('node: ', childs[len]);
-                    if (childs[len].id === "node") {
-                        document.getElementById('addingEventsHere').removeChild(childs[len])
-                    }
-                } while (len--);
-                swal("Poof! Your imaginary file has been deleted!", {
-                        icon: "success"
-
-                    }
-                );
-            } else {
-                swal("Your imaginary file is safe!");
-            }
-        });
-
-}
-
-
+getUrlParam("eventId");
+fillFakeContent();

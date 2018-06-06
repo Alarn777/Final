@@ -1,23 +1,37 @@
 .indexPage {
-
-  .col-title-row {
-    padding: 10px;
-    background: #e9ecef;
-    p {
-      margin: 5px;
-      font-weight: bold;
+    .col-title-row {
+        padding: 10px;
+        background: #e9ecef;
+        p {
+            margin: 5px;
+            font-weight: bold;
+        }
     }
-  }
-  .one-event {
-    margin-top: 2px;
-    p {
-      margin: 5px;
+    .one-event {
+        margin-top: 2px;
+        p {
+            margin: 5px;
+        }
+        button {
+            margin: 5px;
+            border: none;
+        }
+        border: 1px solid black;
+        border-radius: 3px;
     }
-    button {
-      margin: 5px;
+    .in-progress {
+        margin-top: 2px;
+        p {
+            margin: 5px;
+            i {
+                margin-left: 50%;
+            }
+        }
+        button {
+            margin: 5px;
+        }
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: lightskyblue;
     }
-      //background-color: #90caf9;
-    border: 1px solid black;
-    border-radius: 3px;
-  }
 }
