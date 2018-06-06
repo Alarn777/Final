@@ -18,8 +18,8 @@ window.onload = function (ev) {
         fillWithContent();
 
     if (document.body.id === "indexPage")
-        for (var i = 4; i > 0; i--) {
-            addItemIndexPage();
+        for (var i = 0; i < 4; i++) {
+            addItemIndexPage(i);
         }
 
 };
@@ -39,12 +39,12 @@ function success() {
 
 }
 
-function addItemIndexPage() {
+function addItemIndexPage(eventId) {
     console.log("Entered");
     //creating new row
     var newRow = document.createElement("div");
     newRow.className = "row one-event";
-    newRow.id = "event";
+    newRow.id = "event" + eventId;
     //filling it with content
     var newDiv = document.createElement("div");        // Create a <div> element
     newDiv.className = "col-md-2";
@@ -97,8 +97,8 @@ function addItemIndexPage() {
     var eventButton = document.createElement("button");
     eventButton.className = "fas fa-clipboard-list";
     var x = window.location.hostname + "eventDetailsPage.html";
-    eventButton.onclick = function () {
-        window.location = "eventDetailsPage.html"
+    eventButton.onclick = function (eventId) {
+        window.location = "eventDetailsPage.html?eventId=" + eventId;
     };
     newDiv.appendChild(eventButton);
 
