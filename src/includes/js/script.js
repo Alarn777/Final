@@ -109,7 +109,9 @@ function addItemIndexPage() {
     var deleteEventButton = document.createElement("button");
     deleteEventButton.className = "fas fa-trash-alt";
     newDiv.appendChild(deleteEventButton);
-    deleteEventButton.onclick = function () {deleteEventOnIndex(); };
+    deleteEventButton.onclick = function () {
+        deleteEventOnIndex();
+    };
 
     newRow.appendChild(newDiv);
 
@@ -121,8 +123,6 @@ function addItemIndexPage() {
 function deleteEventOnIndex() {
 
     // $(this).delete();
-
-
 
 
     swal({
@@ -137,16 +137,16 @@ function deleteEventOnIndex() {
                 var childs = document.getElementById('addingEventsHere').childNodes;
                 var len = childs.length;
 
-                if(len --) do {
+                if (len--) do {
                     console.log('node: ', childs[len]);
                     if (childs[len].id === "node") {
                         document.getElementById('addingEventsHere').removeChild(childs[len])
                     }
-                } while(len --);
+                } while (len--);
                 swal("Poof! Your imaginary file has been deleted!", {
-                    icon: "success"
+                        icon: "success"
 
-                }
+                    }
                 );
             } else {
                 swal("Your imaginary file is safe!");
