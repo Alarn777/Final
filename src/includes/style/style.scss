@@ -49,7 +49,7 @@
         }
     }
     
-    @media (min-width: 830px) {
+    @media (min-width: 830px) and (max-width:999px) {
         .container {
             max-width: 830px;
         }
