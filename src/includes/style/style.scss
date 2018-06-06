@@ -1,16 +1,58 @@
-@import "_dev";
-@import "_cleanup";
-@import "_eventDetailsPage";
-@import '_serviceRequestOpen';
-@import "_index";
-input {
-    border-radius: 5px;
-    border: 1px solid #cfcfcf;
-}
-
-.btn-primary {
-    background-color: #90caf9;
-}
-.btn-disabled {
-    border: solid #aaaaaa 1px;
-}
+    @import "_cleanup";
+    @import "_eventDetailsPage";
+    @import '_serviceRequestOpen';
+    @import "_index";
+    input {
+        border-radius: 5px;
+        border: 1px solid #cfcfcf;
+    }
+    
+    .btn-primary {
+        background-color: #90caf9;
+    }
+    
+    .btn-disabled {
+        border: solid #aaaaaa 1px;
+    }
+    
+    .navbar-size-fix {
+        ul {
+            //position: relative;
+            margin-left: 44%;
+        }
+        img {
+            height: 40px;
+            width: auto;
+        }
+        button {
+            border: none;
+            background: none;
+            margin: 5px;
+        }
+    }
+    
+    .breadcrumb-search-container {
+        padding: 10px;
+        width: 100%;
+        height: 100px;
+        position: relative;
+        .breadcrumb {
+            position: relative;
+            width: 60%;
+            float: left;
+        }
+        .search-fix {
+            margin: 5px;
+            margin-left: 9%;
+            position: relative;
+            float: left;
+            width: 30%;
+            button {}
+        }
+    }
+    
+    @media (min-width: 830px) {
+        .container {
+            max-width: 830px;
+        }
+    }

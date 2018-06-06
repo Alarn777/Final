@@ -12,5 +12,15 @@ function sendEvent() {
     button.disabled = true;
     button.classList.remove("btn-primary");
     button.classList.add("btn-disabled");
+};
 
-}
+var setEventId = function() {
+    var eventId = getUrlParam("eventId");
+    for (const eventIdElement of document.querySelectorAll(".eventId"))
+        eventIdElement.innerHTML = eventId;
+
+    document.getElementById("openServiceRequest")
+        .attributes["href"].value = "serviceRequestOpen.html?eventId=" + eventId;
+};
+
+setEventId();

@@ -1,17 +1,3 @@
-var getUrlParam = function(param) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (pair[0] == param)
-            return pair[1];
-
-    }
-
-    return (false);
-}
-
 var fillFakeContent = function(ev) {
     if (document.body.id === "indexPage")
         for (var i = 1; i < 7; i++)
@@ -44,7 +30,7 @@ function addItemIndexPage(eventId) {
 
     var newIconButton = function(iconClass, onClick) {
         var button = document.createElement("button");
-        button.className = "fas " + iconClass;
+        button.className = "icon-button fas " + iconClass;
         if (onClick)
             button.onclick = onClick;
 
@@ -87,8 +73,9 @@ function addItemIndexPage(eventId) {
 
     cell = newCell();
     cell.appendChild(newIconButton("fa-plus-square"));
-    cell.appendChild(newIconButton("fa-clipboard-list", function(eventId) {
-        window.location = "eventDetailsPage.html?eventId=" + eventId;
+    cell.appendChild(newIconButton("fa-clipboard-list", function(ev) {
+        window.location = "eventDetailsPage.html?eventId=" +
+            ev.currentTarget.parentElement.parentElement.id.replace("event", "");
     }));
     cell.appendChild(newIconButton("fa-check-circle"));
     cell.appendChild(newIconButton("fa-trash-alt"));

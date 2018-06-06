@@ -42,7 +42,7 @@
                 <a href="index.html">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                <a href="eventDetailsPage.html">Event 1</a>
+                <a href="eventDetailsPage.html">Event <span class="eventId"></span></a>
             </li>
             <li class="breadcrumb-item" aria-current="page">Service Request</li>
         </ol>
@@ -58,7 +58,7 @@
         <div class="row">
             <main class="col-xl-12">
                 <div class="row event-table-row-description">
-                    <div class="col-2">3</div>
+                    <div class="col-2"><span class="eventId"></span></div>
                     <div class="col-2 text-left">21/1/2018</div>
                     <div class="col-8 text-left">Classroom 224,floor 2, Engineering building</div>
                 </div>
@@ -95,7 +95,7 @@
                         <label for="requestedBy">Requested By:</label>
                         <input type="text" class="form-control" id="requestedBy">
                         <button type="button" class="btn btn-default submission-buttons">Cancel</button>
-                        <button type="button" onclick="success()" class="btn btn-primary submission-buttons">Submit Request
+                        <button type="button" onclick="submitRequest()" class="btn btn-primary submission-buttons">Submit Request
                         </button>
                     </div>
                 </form>
@@ -112,6 +112,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="includes/js/utils.js"></script>
         <script src="includes/js/serviceRequestOpen.js"></script>
 </body>
 

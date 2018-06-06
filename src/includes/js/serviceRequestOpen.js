@@ -1,23 +1,20 @@
 var createFakeContent = function() {
-
     if (document.body.id === "serviceRequestOpen")
         fillWithContent();
 };
 
-
-function success() {
+function submitRequest() {
     swal({
         icon: "success",
-        title: "Event No.3 was sent to Yosi Mazur  (Glassworker) by Moshe Maso for further processing.",
+        title: "Event No." + getUrlParam("eventId") + " was sent to Yosi Mazur  (Glassworker) by Moshe Maso for further processing.",
         showConfirmButton: true,
         confirmButtonText: "OK",
         closeOnConfirm: false
     }).then(function(result) {
-        window.location = "http://localhost:63342/Final/index.html?eventId=2";
+        window.location = "index.html?eventId=" + getUrlParam("eventId");
     })
+};
 
-
-}
 var fillWithContent = function() {
     document.getElementById("serviseProvider").innerHTML = "Yosi Mazur  (Glassworker)";
     $('#serviseProvider').val("Yosi Mazur  (Glassworker)");
@@ -31,5 +28,12 @@ var fillWithContent = function() {
     $('#requestedBy').val("Moshe Maso");
 };
 
+var setEventId = function() {
+    var eventId = getUrlParam("eventId");
+    for (const eventIdElement of document.querySelectorAll(".eventId"))
+        eventIdElement.innerHTML = eventId;
+};
+
 
 createFakeContent();
+setEventId();
