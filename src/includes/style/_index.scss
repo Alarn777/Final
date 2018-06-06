@@ -1,13 +1,23 @@
 .indexPage {
-//
-//  background-color: blanchedalmond;
-//  .breadcrubs-size {
-//  }
-//  //.search-form-design {
-//  //  margin: 5px;
-//  //}
-//  //.bread-search {
-//  //  margin: 5px;
-//  //}
-//  //.navbar-toggler, .navbar-collapse, and .navbar-expand{-sm|-md|-lg|-xl}
+
+  .col-title-row {
+    padding: 10px;
+    background: #e9ecef;
+    p {
+      margin: 5px;
+      font-weight: bold;
+    }
+  }
+  .one-event {
+    margin-top: 2px;
+    p {
+      margin: 5px;
+    }
+    button {
+      margin: 5px;
+    }
+      //background-color: #90caf9;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
 }

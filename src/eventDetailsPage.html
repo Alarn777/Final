@@ -15,6 +15,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
     <title>Improvements in Shenkar</title>
@@ -38,6 +39,22 @@
             <button class="fa fa-cog fa-2x" type="submit"></button>
         </form>
     </div>
+</nav>
+
+<nav aria-label="breadcrumb" class="breadcrumb-search-container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item" aria-current="page">Event 1</a></li>
+
+    </ol>
+    <div class="container search-fix">
+        <div class="input-group stylish-input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <button class="fa fa-search fa-2x" type="submit" onclick="addItemIndexPage()"></button>
+        </div>
+
+    </div>
+
 </nav>
 
 <body class="eventDetailsPage">
@@ -80,7 +97,7 @@
                                     <b>Description:</b>The glass window is broken in the classroom
                                 </li>
                             </ul>
-                            <h4>Transfer event to:</h4></label>
+                            <h4>Transfer event to:</h4>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Enter username..." id="event_passed_to">
                                 </div>
@@ -93,7 +110,7 @@
                                 </li>
                                 <li>
                                     <i class="fa-li fa fa-wrench"></i>
-                                    <a href="#">Open Service Request</a>
+                                    <a href="serviceRequestOpen.html">Open Service Request</a>
                                 </li>
                                 <li>
                                     <i class="fa-li fa fa-paper-plane"></i>
