@@ -102,7 +102,7 @@ a {
 
 .serviceRequestOpen .submission-buttons .btn-default {
   border-width: 1px;
-  border-color: silver;
+  border-color: #c0c0c0;
 }
 
 .serviceRequestOpen .swal-title {
@@ -123,7 +123,7 @@ a {
 
 .indexPage .one-event {
   margin-top: 2px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   border-radius: 3px;
 }
 
@@ -138,9 +138,9 @@ a {
 
 .indexPage .in-progress {
   margin-top: 2px;
-  border: 1px solid black;
+  border: 1px solid #000000;
   border-radius: 3px;
-  background-color: lightskyblue;
+  background-color: #87cefa;
 }
 
 .indexPage .in-progress p {

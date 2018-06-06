@@ -16,7 +16,7 @@
             margin: 5px;
             border: none;
         }
-        border: 1px solid black;
+        border: 1px solid #000000;
         border-radius: 3px;
     }
     .in-progress {
@@ -30,9 +30,10 @@
         button {
             margin: 5px;
         }
-        border: 1px solid black;
+        border: 1px solid #000000;
+        ;
         border-radius: 3px;
-        background-color: lightskyblue;
+        background-color: #87cefa;
     }
     .icon-button {
         cursor: pointer;
