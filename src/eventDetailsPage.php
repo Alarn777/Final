@@ -61,38 +61,50 @@
             <main class="col-xl-12">
                 <form action="post">
                     <div class="row event-table-row-description">
-                        <div class="col-2"><span class="eventId"></span></div>
-                        <div class="col-2 text-left">21/1/2018</div>
-                        <div class="col-8 text-left">Classroom 224,floor 2, Engineering building</div>
+                    <?php
+                      include("db.php");
+                      $event_id = preg_replace('/[^0-9]/', '', $_REQUEST['eventId']);
+                      $eventsQuery = "Select * From events_208 Where id=" . $event_id;
+                      $eventsResult = mysqli_query($connection, $eventsQuery);
+                      if (!$eventsResult) {
+                          die("Select Event failed");
+                      }
+                      $event = mysqli_fetch_assoc($eventsResult);
+                      
+                        echo "<div class=\"col-2\"><span class=\"eventId\">" . $event["id"] . "</span></div>
+                        <div class=\"col-2 text-left\">". date_format(new DateTime($event["date"]), "m/d/Y") ."</div>
+                        <div class=\"col-8 text-left\">" . $event["location"] . "</div>
                     </div>
-                    <div class="row">
-                        <section class="col-xl-5 description">
+                    <div class=\"row\">
+                        <section class=\"col-xl-5 description\">
                             <h3>Event description:</h3>
                             <ul>
-                                <li>
-                                    <b>Date:</b>21/1/2018
+                                
+                              <li>
+                                    <b>Date:</b>". date_format(new DateTime($event["date"]), "m/d/Y") ."
                                 </li>
                                 <li>
-                                    <b>Time:</b>19:00
+                                    <b>Time:</b>". date_format(new DateTime($event["date"]), "h:i") ."
                                 </li>
                                 <li>
-                                    <b>Event Nuber:</b><span class="eventId"></span>
+                                    <b>Event Nuber:</b><span class=\"eventId\">" . $event["id"] . "</span>
                                 </li>
                                 <li>
-                                    <b>Status:</b>Open
+                                    <b>Status:</b>" . $event["status"] . "
                                 </li>
                                 <li>
-                                    <b>Category:</b>Fix
+                                    <b>Category:</b>" . $event["type"] . "
                                 </li>
                                 <li>
-                                    <b>Location:</b>Classroom 224,floor 2, Engineering building
+                                    <b>Location:</b>" . $event["location"] . "
                                 </li>
                                 <li>
-                                    <b>Reported by:</b>
+                                    <b>Reported by:</b>" . $event["reported_by"] . "
                                 </li>
                                 <li>
-                                    <b>Description:</b>The glass window is broken in the classroom
-                                </li>
+                                    <b>Description:</b>" . $event["description"] . "
+                                </li>"
+                                ?>
                             </ul>
                             <form>
                                 <h4>Transfer event to:</h4>
