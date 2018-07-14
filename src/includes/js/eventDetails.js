@@ -20,7 +20,7 @@ var setEventId = function() {
         eventIdElement.innerHTML = eventId;
 
     document.getElementById("openServiceRequest")
-        .attributes["href"].value = "serviceRequestOpen.html?eventId=" + eventId;
+        .attributes["href"].value = "serviceRequestOpen.php?eventId=" + eventId;
 };
 
 setEventId();

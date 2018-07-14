@@ -86,7 +86,9 @@ a {
 
 .serviceRequestOpen .col-lg-4 {
   width: auto;
-  flex: 0 0 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   margin: 10px;
 }
 
@@ -111,56 +113,61 @@ a {
   margin-bottom: 28px;
 }
 
-.indexPage .col-title-row {
+#indexPage .col-title-row {
   padding: 10px;
   background: #e9ecef;
 }
 
-.indexPage .col-title-row p {
+#indexPage .col-title-row p {
   margin: 5px;
   font-weight: bold;
 }
 
-.indexPage .one-event {
+#indexPage .one-event {
   margin-top: 2px;
   border: 1px solid #000000;
   border-radius: 3px;
 }
 
-.indexPage .one-event p {
+#indexPage .one-event p {
   margin: 5px;
 }
 
-.indexPage .one-event button {
+#indexPage .one-event button {
   margin: 5px;
   border: none;
 }
 
-.indexPage .in-progress {
+#indexPage .in-progress {
   margin-top: 2px;
   border: 1px solid #000000;
   border-radius: 3px;
   background-color: #87cefa;
 }
 
-.indexPage .in-progress p {
+#indexPage .in-progress p {
   margin: 5px;
 }
 
-.indexPage .in-progress p i {
+#indexPage .in-progress p i {
   margin-left: 50%;
 }
 
-.indexPage .in-progress button {
+#indexPage .in-progress button {
   margin: 5px;
 }
 
-.indexPage .icon-button {
+#indexPage .icon-button {
+  color: #000000;
   cursor: pointer;
   font-size: 1.2em;
 }
 
-.indexPage .icon-button:hover {
+#indexPage .icon-button:visited, #indexPage .icon-button:visited:active, #indexPage .icon-button:active {
+  color: #000000;
+}
+
+#indexPage .icon-button:hover {
   color: #2196f3;
 }
 

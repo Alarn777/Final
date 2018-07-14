@@ -74,7 +74,7 @@ function addItemIndexPage(eventId) {
     cell = newCell();
     cell.appendChild(newIconButton("fa-plus-square"));
     cell.appendChild(newIconButton("fa-clipboard-list", function(ev) {
-        window.location = "eventDetailsPage.html?eventId=" +
+        window.location = "eventDetailsPage.php?eventId=" +
             ev.currentTarget.parentElement.parentElement.id.replace("event", "");
     }));
     cell.appendChild(newIconButton("fa-check-circle"));

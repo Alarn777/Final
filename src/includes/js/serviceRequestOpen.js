@@ -11,7 +11,7 @@ function submitRequest() {
         confirmButtonText: "OK",
         closeOnConfirm: false
     }).then(function(result) {
-        window.location = "index.html?eventId=" + getUrlParam("eventId");
+        window.location = "index.php?eventId=" + getUrlParam("eventId");
     })
 };
 

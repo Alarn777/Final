@@ -1,4 +1,4 @@
-.indexPage {
+#indexPage {
     .col-title-row {
         padding: 10px;
         background: #e9ecef;
@@ -31,11 +31,17 @@
             margin: 5px;
         }
         border: 1px solid #000000;
-        ;
         border-radius: 3px;
         background-color: #87cefa;
     }
     .icon-button {
+        color: #000000;
+        &:visited,
+        &:visited:active,
+        &:active,
+        {
+            color: #000000;
+        }
         cursor: pointer;
         font-size: 1.2em;
         &:hover {
