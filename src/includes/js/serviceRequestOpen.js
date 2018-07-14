@@ -15,6 +15,9 @@ function submitRequest() {
     })
 };
 
+
+
+
 var fillWithContent = function() {
     document.getElementById("serviseProvider").innerHTML = "Yosi Mazur  (Glassworker)";
     $('#serviseProvider').val("Yosi Mazur  (Glassworker)");
@@ -30,7 +33,7 @@ var fillWithContent = function() {
 
 var setEventId = function() {
     var eventId = getUrlParam("eventId");
-    for (const eventIdElement of document.querySelectorAll(".eventId"))
+    for (var eventIdElement of document.querySelectorAll(".eventId"))
         eventIdElement.innerHTML = eventId;
 };
 

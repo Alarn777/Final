@@ -81,4 +81,64 @@ function addItemIndexPage(eventId) {
 }
 
 getUrlParam("eventId");
-fillFakeContent();
+// fillFakeContent();
+
+// var set = false;
+//
+// window.onload = function (ev) {
+//     if(set === false) {
+//         set = true;
+//         var trushButton;
+//         var children = document.getElementById("addingEventsHere").children;
+//         var i1 = 1;
+//         while (children[i1] != null) {
+//             var name = children[i1].id;
+//             var idNum = name.replace('event', '');
+//             idNum = "trashButton " + idNum;
+//             trushButton = document.getElementById(idNum);
+//             trushButton.onclick = function () {
+//                 var parent = trushButton.parentElement;
+//                 parent = parent.parentElement;
+//                 console.log(parent.id);
+//                 deleteEvent(parent.id);
+//             };
+//             i1++;
+//         }
+//     }
+// };
+
+
+// document.getElementById("trashButton").addEventListener("click", deleteEvent);
+
+
+
+function deleteEvent() {
+    var clickedElement = event.target;
+
+    // var trushButton = document.getElementById("trashButton");
+    var parent = clickedElement.parentElement;
+    parent = parent.parentElement;
+    console.log(parent.id);
+    var idNum = parent.id.replace('event', '');
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then(function(result) {
+        if(result){
+           var resoulat = '<?php deleteEvent('+idNum+');?>';
+            jQuery.ajax({
+                type: "POST",
+                url: 'deleteEvent.php',
+                data: {functionname: 'deleteEvent', arguments: [idNum]},
+                success:function(data) {
+                    // alert(data);
+                }
+            });
+
+        }
+    })
+};
+
