@@ -38,7 +38,7 @@
 <nav aria-label="breadcrumb" class="breadcrumb-search-container">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
         </li>
         <li class="breadcrumb-item" aria-current="page">Event <span class="eventId"></span></a>
         </li>
