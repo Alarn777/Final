@@ -105,7 +105,7 @@ echo
       
        
         <div class=\"form-group\">
-            <label for=\"requestedBy\">Requested By:</label>
+            <label for=\"requested_by\">Requested By:</label>
             <input name=\"requested_by\" type=\"text\" class=\"form-control\" id=\"requestedBy\" value=\" " . $event["reported_by"] . "\">
             <button type=\"button\" class=\"btn btn-default submission-buttons\">Cancel</button>
             <button  type=\"submit\" class=\"btn btn-primary submission-buttons\">Submit Request

@@ -11,14 +11,10 @@ $("#serviceRequest").submit(function(e) {
         confirmButtonText: "OK",
         closeOnConfirm: false
     }).then(function(result) {
-        //window.location = "/index.php";
         this.submit();
     });
 
 });
-
-
-
 
 var fillWithContent = function() {
 
@@ -36,7 +32,6 @@ var getEventId = function() {
     return eventId;
 };
 createFakeContent();
-setEventId();
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
