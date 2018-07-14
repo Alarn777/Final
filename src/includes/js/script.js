@@ -19,17 +19,21 @@ function deleteEvent(id) {
         dangerMode: true,
     }).then(function(result) {
         if (result) {
+            showLoadingSpinner();
             $.ajax({
                 type: "DELETE",
                 url: 'event.php?id=' + id,
                 success: function(data) {
-                    console.log(data);
+                    $('#event' + id).fadeOut("slow", function() {
+                        $('#event' + id).remove();
+                    });
+                    removeSpinner();
                 },
                 error: function(e) {
+                    removeSpinner();
                     console.log(e);
                 }
             });
-
         }
     });
 };
