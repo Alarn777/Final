@@ -3,24 +3,18 @@ var createFakeContent = function() {
         fillWithContent();
 };
 
-function submitRequest() {
-    var form = document.getElementById("actionForm");
-
+$("#serviceRequest").submit(function(e) {
     swal({
         icon: "success",
-        title: "Event No." + getUrlParam("eventId") + " was sent to Yosi Mazur  (Glassworker) by Moshe Maso for further processing.",
+        title: "Event No." + getUrlParam("eventId") + " was sent to " + this.recipient.value + "  by " + this.requested_by.value + " for further processing.",
         showConfirmButton: true,
         confirmButtonText: "OK",
         closeOnConfirm: false
     }).then(function(result) {
-        // window.location = "index.php?eventId=" + getUrlParam("eventId");
-        $("#actionForm").submit();
-    })
+        this.submit();
+    });
 
-};
-
-
-
+});
 
 var fillWithContent = function() {
 
@@ -30,20 +24,14 @@ var fillWithContent = function() {
     });
 };
 
-// var setEventId = function() {
-//     var eventId = getUrlParam("eventId");
-//     for (var eventIdElement of document.querySelectorAll(".eventId"))
-//         eventIdElement.innerHTML = eventId;
-// };
 
 
-var getEventId = function () {
+var getEventId = function() {
     var eventId = getUrlParam("eventId");
-    eventId = eventId.replace('event','');
+    eventId = eventId.replace('event', '');
     return eventId;
 };
 createFakeContent();
-setEventId();
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));

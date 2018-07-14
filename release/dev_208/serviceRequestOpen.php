@@ -75,7 +75,7 @@ echo
 </div>
 </main>
 <section class=\"col-xl-8\">
-    <form id=\"actionForm\" action=\"submitRequest.php\">
+    <form id=\"serviceRequest\" action=\"serviceRequest.php\">
         <div class=\"input-group mb-3\">
         <label for=\"serviseProvider\" class=\"col-lg-4\">Recipient's username:</label>
         <input name=\"recipient\" id=\"serviseProvider\" type=\"text\" class=\"form-control\" aria-label=\"Recipient's username\" aria-describedby=\"basic-addon2\" >
@@ -108,7 +108,7 @@ echo
             <label for=\"requestedBy\">Requested By:</label>
             <input name=\"requested_by\" type=\"text\" class=\"form-control\" id=\"requestedBy\" value=\" " . $event["reported_by"] . "\">
             <button type=\"button\" class=\"btn btn-default submission-buttons\">Cancel</button>
-            <button  type=\"button\" onclick=\"submitRequest()\" class=\"btn btn-primary submission-buttons\">Submit Request
+            <button  type=\"submit\" class=\"btn btn-primary submission-buttons\">Submit Request
             </button>
         </div>
         <input type=\"hidden\" name=\"id\" value=\" ". $event["id"]. "\">
