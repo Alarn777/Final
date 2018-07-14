@@ -94,7 +94,7 @@
                 <button class=\"icon-button fas fa-plus-square\"></button>
                 <a href=\"eventDetailsPage.php?eventId=".$event["id"]."\" class=\"icon-button fas fa-clipboard-list\"></a>
                 <button class=\"icon-button fas fa-check-circle\"></button>
-                <button id=\"trashButton ".$event["id"]."\" onclick=\"deleteEvent()\" class=\"icon-button fas fa-trash-alt\"></button>
+                <button id=\"deleteEvent".$event["id"]."\" class=\"icon-button fas fa-trash-alt\"></button>
             </div>
         </div>";
         }
