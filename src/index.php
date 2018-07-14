@@ -72,7 +72,7 @@
         }
         while ($event = mysqli_fetch_assoc($eventsResult)) {
             echo
-                "<div class=\"row one-event\" id=\"event" . $event["id"] . "\">
+                "<div class=\"row one-event".($event["status"]=="InProcess"?" in-progress":"")."\" id=\"event" . $event["id"] . "\">
             <div class=\"col-md-2\">
                 <p>" . $event["id"] . "</p>
             </div>

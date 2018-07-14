@@ -12,6 +12,9 @@
     <title>Improvements in Shenkar</title>
 </head>
 
+
+<body class="eventDetailsPage">
+    
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-size-fix">
     <a class="navbar-brand" href="#">
         <img src="includes/images/v.png">
@@ -53,8 +56,6 @@
     </div>
 
 </nav>
-
-<body class="eventDetailsPage">
     <div class="container">
 
         <div class="row">

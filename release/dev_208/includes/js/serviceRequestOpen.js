@@ -4,6 +4,8 @@ var createFakeContent = function() {
 };
 
 function submitRequest() {
+    var form = document.getElementById("actionForm");
+
     swal({
         icon: "success",
         title: "Event No." + getUrlParam("eventId") + " was sent to Yosi Mazur  (Glassworker) by Moshe Maso for further processing.",
@@ -11,29 +13,38 @@ function submitRequest() {
         confirmButtonText: "OK",
         closeOnConfirm: false
     }).then(function(result) {
-        window.location = "index.php?eventId=" + getUrlParam("eventId");
+        // window.location = "index.php?eventId=" + getUrlParam("eventId");
+        $("#actionForm").submit();
     })
+
 };
+
+
+
 
 var fillWithContent = function() {
-    document.getElementById("serviseProvider").innerHTML = "Yosi Mazur  (Glassworker)";
-    $('#serviseProvider').val("Yosi Mazur  (Glassworker)");
-    document.getElementById("description").innerHTML = "The glass window is broken in the classroom";
-    $('#description').val("The glass window is broken in the classroom");
-    document.getElementById("location").innerHTML = "Classroom 224,floor 2, Engineering building, Shenkar";
-    $('#location').val("Classroom 224,floor 2, Engineering building, Shenkar");
-    document.getElementById("comment").innerHTML = "I add some comment here";
-    $('#comment').val("I add some comment here");
-    document.getElementById("requestedBy").innerHTML = "Moshe Maso";
-    $('#requestedBy').val("Moshe Maso");
+
+    $.getJSON("includes/data/data.json", function(fb) {
+        var userID = getRandomInt(3);
+        $('#serviseProvider').val(fb[userID].name);
+    });
 };
 
-var setEventId = function() {
+// var setEventId = function() {
+//     var eventId = getUrlParam("eventId");
+//     for (var eventIdElement of document.querySelectorAll(".eventId"))
+//         eventIdElement.innerHTML = eventId;
+// };
+
+
+var getEventId = function () {
     var eventId = getUrlParam("eventId");
-    for (const eventIdElement of document.querySelectorAll(".eventId"))
-        eventIdElement.innerHTML = eventId;
+    eventId = eventId.replace('event','');
+    return eventId;
 };
-
-
 createFakeContent();
 setEventId();
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}

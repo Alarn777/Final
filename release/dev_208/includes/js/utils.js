@@ -10,4 +10,16 @@ var getUrlParam = function(param) {
     }
 
     return (false);
-}
+};
+
+var showLoadingSpinner = function() {
+    var spinner = $("<div class=\"spinner\">").append();
+    var b1 = $("<div class=\"double-bounce1\"></div>");
+    var b2 = $("<div class=\"double-bounce2\"></div>");
+    spinner.append(b1, b2);
+    $("body").append(spinner);
+};
+
+var removeSpinner = function() {
+    $(".spinner").remove();
+};

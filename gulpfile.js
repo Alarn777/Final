@@ -7,8 +7,8 @@ const paths = {
     srcAssets: './src/**/*.{jpg,svg,png,json}',
     srcCSS: './src/**/*.css',
     srcJS: './src/**/*.js',
-    //dist: "./release/dev_208/",
-    dist: "C:/xampp/htdocs/"
+    dist: "./release/dev_208/",
+    //dist: "C:/xampp/htdocs/"
 };
 
 gulp.task('release', ['html', 'php', 'assets', 'css', 'js']);

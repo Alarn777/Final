@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="includes/style/style.css">
 </head>
 
-<body class="serviceRequestOpen" id="serviceRequestOpen">
+<body id="serviceRequestOpen">
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-size-fix">
     <a class="navbar-brand" href="#">
         <img src="includes/images/v.png">

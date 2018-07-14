@@ -1,0 +1,25 @@
+[{
+  "recipient": 1,
+  "name": "Yosi Mazur"
+},
+  {
+    "recipient": 2,
+    "name": "Beni Lopo"
+  },
+  {
+    "recipient": 3,
+    "name":"Moti Vares"
+  },
+  {
+    "recipient": 4,
+    "name": "Mani Kobo"
+  },
+  {
+    "recipient": 5,
+    "name":  "Yosi Salmon"
+  },
+  {
+    "recipient": 5,
+    "name": "Rafi Simon"
+  }
+]

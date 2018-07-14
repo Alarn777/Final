@@ -1,3 +1,24 @@
+var eventForm = $("#updateEvent");
+
+eventForm.submit(function(event) {
+    showLoadingSpinner();
+    var url = 'event.php?eventid=' + getUrlParam("eventId") + "&comments=" + this.comments.value;
+    console.log(url);
+    $.ajax({
+        type: "PUT",
+        url: url,
+        success: function(data) {
+            removeSpinner();
+        },
+        error: function(e) {
+            removeSpinner();
+            console.log(e);
+        }
+    });
+    event.preventDefault();
+});
+
+
 function sendEvent() {
     var inputValue = document.querySelector('input[name="sendEventTo"]').value;
     var newTextFromInput = document.createElement("div");
