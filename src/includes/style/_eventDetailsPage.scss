@@ -15,9 +15,9 @@
             min-height: 300px;
             li {
                 border-bottom: none;
-                b {
-                    margin-right: 4px;
-                }
+            }
+            b {
+                margin-right: 4px;
             }
         }
     }
@@ -27,17 +27,15 @@
         }
         ul {
             margin-top: 54px;
-            li {
-                height: 33px;
-            }
+        }
+        li {
+            height: 33px;
         }
     }
     .attach-image {
         padding-top: 15px;
-        .card {
-            img {
-                padding: 7px;
-            }
+        .card-img-top {
+            padding: 7px;
         }
         textarea {
             border-radius: 10px;
