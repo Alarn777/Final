@@ -74,7 +74,7 @@
             echo
                 "<div class=\"row one-event".($event["status"]=="InProcess"?" in-progress":"")."\" id=\"event" . $event["id"] . "\">
             <div class=\"col-md-2\">
-                <p>" . $event["id"] . "</p>
+                <p>" . $event["id"] . ($event["status"]=="InProcess"?" <i class=\"fa fa-sync\"></i>":"")."</p>
             </div>
             <div class=\"col-md-2\">
                 <p>" . date_format(new DateTime($event["date"]), "m/d/Y") . "</p>

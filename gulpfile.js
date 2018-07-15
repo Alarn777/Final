@@ -8,11 +8,15 @@ const paths = {
     srcCSS: './src/**/*.css',
     srcJS: './src/**/*.js',
     dist: "./release/dev_208/",
-    //dist: "C:/xampp/htdocs/"
+    distLocal: "C:/xampp/htdocs/"
 };
 
-gulp.task('release', ['html', 'php', 'assets', 'css', 'js']);
+gulp.task('release', ['config', 'html', 'php', 'assets', 'css', 'js']);
 
+gulp.task('config', function() {
+    if (process.argv.indexOf("-local") > 0) paths.dist = paths.distLocal;
+    console.log("Deploy to: " + paths.dist);
+});
 gulp.task('assets', function() {
     return gulp.src(paths.srcAssets).pipe(gulp.dest(paths.dist));
 });
