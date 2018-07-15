@@ -8,59 +8,53 @@
 
     <link rel="stylesheet" href="includes/style/style.css">
 
-
     <title>Improvements in Shenkar</title>
 </head>
 
 
 <body class="eventDetailsPage">
-    
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-size-fix">
-    <a class="navbar-brand" href="#">
-        <img src="includes/images/v.png">
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-size-fix">
+        <a class="navbar-brand" href="#">
+            <img src="includes/images/v.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="includes/images/improve.png">
-                </a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="fa fa-user fa-2x" type="submit"></button>
-            <button class="fa fa-cog fa-2x" type="submit"></button>
-        </form>
-    </div>
-</nav>
-
-<nav aria-label="breadcrumb" class="breadcrumb-search-container">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">
-            <a href="index.php">Home</a>
-        </li>
-        <li class="breadcrumb-item" aria-current="page">Event <span class="eventId"></span></a>
-        </li>
-
-    </ol>
-    <div class="container search-fix">
-        <div class="input-group stylish-input-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <button class="fa fa-search fa-2x" type="submit" onclick="addItemIndexPage()"></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="includes/images/improve.png">
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="fa fa-user fa-2x" type="submit"></button>
+                <button class="fa fa-cog fa-2x" type="submit"></button>
+            </form>
         </div>
+    </nav>
 
-    </div>
+    <nav aria-label="breadcrumb" class="breadcrumb-search-container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="index.php">Home</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">Event <span class="eventId"></span></a>
+            </li>
 
-</nav>
+        </ol>
+        <div class="container search-fix">
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="fa fa-search fa-2x" type="submit" onclick="addItemIndexPage()"></button>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-
         <div class="row">
             <main class="col-xl-12">
-               
                     <div class="row event-table-row-description">
                     <?php
                     include("db.php");
@@ -143,7 +137,6 @@
                                 </li>
                             </ul>
                         </section>
-                        
                         <section class=\"col-xl-4 attach-image\">
                             <h3>Attached picture:</h3>
                             <div class=\"card\">
@@ -165,7 +158,6 @@
                         </section>"
                     ?>
                     </div>
-               
             </main>
         </div>
         <script

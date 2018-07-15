@@ -87,7 +87,7 @@ a {
   border-bottom: none;
 }
 
-.eventDetailsPage .description ul li b {
+.eventDetailsPage .description ul b {
   margin-right: 4px;
 }
 
@@ -99,7 +99,7 @@ a {
   margin-top: 54px;
 }
 
-.eventDetailsPage .event-actions ul li {
+.eventDetailsPage .event-actions li {
   height: 33px;
 }
 
@@ -107,7 +107,7 @@ a {
   padding-top: 15px;
 }
 
-.eventDetailsPage .attach-image .card img {
+.eventDetailsPage .attach-image .card-img-top {
   padding: 7px;
 }
 
